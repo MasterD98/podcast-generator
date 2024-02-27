@@ -12,11 +12,7 @@ with open('feed.yaml','r') as file:
             title=item['title'],
             author=ymal_data['author'],
             description=item['description'],
-            link=Enclosure(
-                length=item['length'],
-                type='audio/x-m4a',
-                url=ymal_data['link']+item['file']
-            ))
+            link=ymal_data['link']+item['file']
         Items.append(newItem)
 
     feed=Feed(
