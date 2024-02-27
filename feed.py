@@ -13,6 +13,7 @@ with open('feed.yaml','r') as file:
             author=ymal_data['author'],
             description=item['description'],
             link=ymal_data['link']+item['file']
+        )
         Items.append(newItem)
 
     feed=Feed(
